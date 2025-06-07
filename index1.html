@@ -1,0 +1,59 @@
+<html>
+<!-- Style the bar as you like -->
+
+
+<head>
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
+
+    <style>
+        .my-slider-progress {
+            background: #ccc;
+        }
+
+        .my-slider-progress-bar {
+            background: greenyellow;
+            height: 2px;
+            transition: width 400ms ease;
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">Slide 01</li>
+                <li class="splide__slide">Slide 02</li>
+            </ul>
+        </div>
+
+        
+
+        <!-- Add the progress bar element -->
+        <div class="my-slider-progress">
+            <div class="my-slider-progress-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        var splide = new Splide('.splide');
+        var bar = splide.root.querySelector('.my-carousel-progress-bar');
+
+        // Updates the bar width whenever the carousel moves:
+        splide.on('mounted move', function () {
+            var end = splide.Components.Controller.getEnd() + 1;
+            var rate = Math.min((splide.index + 1) / end, 1);
+            bar.style.width = String(100 * rate) + '%';
+        });
+
+        splide.mount();
+    </script>
+</body>
+
+</html>
