@@ -895,7 +895,7 @@ body {
 
 
 .msgImg img {
-    width: 100%;
+    width: 120%;
     object-fit: cover;
 }
 
