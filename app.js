@@ -162,7 +162,7 @@ let preLoader = document.querySelector(".preLoader");
 
 function startLoader() {
   let currentVal = 0;
-  document.body.classList.add("remove-scrolling"); 
+  document.body.classList.add("remove-scrolling");
   function updateCounter() {
     if (currentVal === 100) {
       return;
@@ -186,11 +186,11 @@ function startLoader() {
 
 startLoader();
 
-setTimeout(()=>{
-  document.body.classList.remove("remove-scrolling"); 
-} , 3500)
+setTimeout(() => {
+  document.body.classList.remove("remove-scrolling");
+}, 3500)
 
-setTimeout(()=>{
+setTimeout(() => {
   preLoader.classList.add("hideLoader")
   counter.classList.add("hideLoader")
 }, 5700)
@@ -280,7 +280,7 @@ gsap.to(".project", {
 
 // splide
 gsap.to(".splide", {
-  opacity: 1 , scale : 1 , stagger: 0.25, duration: .5,
+  opacity: 1, scale: 1, stagger: 0.25, duration: .5,
   scrollTrigger: {
     trigger: ".splide",
     start: 'top 50%',
@@ -410,10 +410,19 @@ function sendMail() {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     message: document.getElementById("message").value,
-  }
+  };
 
-  emailjs.send("service_9p6liim", "template_zedy1px", parms).then(alert("Email Sent!!"))
+  emailjs.send("service_e6ydlpa", "template_o16gv8q", parms)
+    .then(function (res) {
+      alert("✅ Email Sent Successfully!");
+      document.getElementById("formId").reset(); // Clear form after success
+    })
+    .catch(function (err) {
+      console.error("❌ Email send failed:", err);
+      alert("Something went wrong. Please try again.");
+    });
 }
+
 
 // preventing form default refresh on submission
 
