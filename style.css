@@ -1038,21 +1038,6 @@ textarea {
 
 @media only screen and (max-width: 500px) {
 
-    .work {
-        width: fit-content;
-        padding: 5px 20px;
-        color: rgb(0, 0, 0);
-        background-color: #ffffff;
-        font-family: monospace;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 20;
-        top: 40%;
-        left: 50%;
-        transform: translate(30%, -60%);
-    }
-
     .list,
     .listTitle {
         display: none;
@@ -1131,21 +1116,6 @@ textarea {
 
 @media only screen and (max-width: 800px) {
 
-    .work {
-        width: fit-content;
-        padding: 5px 20px;
-        color: rgb(0, 0, 0);
-        background-color: #ffffff;
-        font-family: monospace;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 20;
-        top: 40%;
-        left: 50%;
-        transform: translate(30%, -60%);
-    }
-
     .rotCon {
         display: none;
     }
@@ -1164,22 +1134,6 @@ textarea {
 }
 
 @media only screen and (max-width: 900px) {
-
-    .work {
-        width: fit-content;
-        padding: 5px 20px;
-        color: rgb(0, 0, 0);
-        background-color: #ffffff;
-        font-family: monospace;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 20;
-        top: 40%;
-        left: 50%;
-        transform: translate(30%, -60%);
-    }
-
 
     .intro .second {
         width: 275px;
@@ -1242,22 +1196,6 @@ textarea {
 }
 
 @media only screen and (max-width: 1020px) {
-
-    .work {
-        width: fit-content;
-        padding: 5px 20px;
-        color: rgb(0, 0, 0);
-        background-color: #ffffff;
-        font-family: monospace;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 20;
-        top: 40%;
-        left: 50%;
-        transform: translate(30%, -60%);
-    }
-
 
     .msgBox {
         margin-top: 0;
